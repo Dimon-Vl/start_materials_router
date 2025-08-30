@@ -21,7 +21,7 @@ const router = createBrowserRouter(
         <Route path="/" element={<Root />} errorElement={<ErrorPage />}>
             {routes.map(r => (
                 <Route
-                    key={r.path}
+                    key={r.path || "index"}
                     path={r.path}
                     index={r.index}
                     element={r.element}
